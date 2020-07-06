@@ -70,8 +70,7 @@ namespace Ejercicio_Videoclub_Herencia
       }
 
       ///---cliente y pelicula del alquiler mas caro
-      if (alquilerMasCaro == null) alquilerMasCaro = alquiler1;
-      else if (alquiler1.Monto > alquilerMasCaro.Monto) alquilerMasCaro = alquiler1;
+      if (alquilerMasCaro == null || alquiler1.Monto > alquilerMasCaro.Monto) alquilerMasCaro = alquiler1;
 
       lblNombreClienteMax.Text = alquilerMasCaro.Cliente.Nombre;
       lblCodigoClienteMax.Text = alquilerMasCaro.Cliente.CodigoSocio.ToString();
